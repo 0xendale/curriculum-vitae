@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dinh An Dai — Protocol Engineer</title>
+<style>
+  :root{
+    --ink:#1a1d1f;
+    --muted:#5c6166;
+    --line:#e3e1db;
+    --bg:#fbfaf7;
+    --accent:#3a5a40;
+    --mono-bg:#f1f0eb;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{
+    max-width:780px;
+    margin:0 auto;
+    padding:64px 48px 80px;
+  }
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    border-bottom:2px solid var(--ink);
+    padding-bottom:22px;
+    margin-bottom:34px;
+    gap:24px;
+    flex-wrap:wrap;
+  }
+  h1{
+    font-size:34px;
+    letter-spacing:-0.02em;
+    margin:0 0 4px;
+    font-weight:700;
+  }
+  .alias{
+    font-family:'SFMono-Regular', Consolas, Menlo, monospace;
+    font-size:13px;
+    color:var(--accent);
+    background:var(--mono-bg);
+    padding:2px 8px;
+    border-radius:3px;
+    display:inline-block;
+    margin-left:8px;
+    vertical-align:middle;
+  }
+  .role-line{
+    color:var(--muted);
+    font-size:15px;
+    margin-top:6px;
+  }
+  .contact{
+    text-align:right;
+    font-size:13px;
+    color:var(--muted);
+    line-height:1.8;
+  }
+  .contact a{
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid var(--line);
+  }
+  .contact a:hover{ border-color:var(--accent); color:var(--accent); }
+
+  section{ margin-bottom:36px; }
+  h2{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--accent);
+    font-weight:700;
+    margin:0 0 18px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--line);
+  }
+
+  .job{ margin-bottom:26px; }
+  .job:last-child{ margin-bottom:0; }
+  .job-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:6px 16px;
+  }
+  .job-title{
+    font-weight:600;
+    font-size:16px;
+  }
+  .job-company{
+    color:var(--accent);
+    font-weight:500;
+  }
+  .job-date{
+    font-size:13px;
+    color:var(--muted);
+    white-space:nowrap;
+    font-family:'SFMono-Regular', Consolas, Menlo, monospace;
+  }
+  .job-links{
+    font-size:12.5px;
+    color:var(--muted);
+    margin-top:2px;
+  }
+  .job-links a{ color:var(--muted); text-decoration:none; border-bottom:1px dotted var(--line); }
+  .job-links a:hover{ color:var(--accent); }
+
+  .achievement{
+    display:inline-block;
+    font-size:12px;
+    color:var(--accent);
+    background:var(--mono-bg);
+    border:1px solid var(--line);
+    padding:2px 9px;
+    border-radius:3px;
+    margin:8px 0 4px;
+    font-weight:600;
+  }
+
+  ul.bullets{
+    margin:10px 0 0;
+    padding-left:18px;
+  }
+  ul.bullets li{
+    margin-bottom:9px;
+    font-size:14.5px;
+  }
+  ul.bullets li:last-child{ margin-bottom:0; }
+  ul.bullets b{ font-weight:600; }
+  .stat{
+    font-family:'SFMono-Regular', Consolas, Menlo, monospace;
+    color:var(--accent);
+    font-weight:600;
+  }
+
+  .skills-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .skill-pill{
+    font-family:'SFMono-Regular', Consolas, Menlo, monospace;
+    font-size:13px;
+    border:1px solid var(--line);
+    background:#fff;
+    padding:6px 14px;
+    border-radius:4px;
+    color:var(--ink);
+  }
+
+  footer{
+    margin-top:50px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+    font-size:11.5px;
+    color:var(--muted);
+    text-align:center;
+  }
+
+  @media print{
+    body{ background:#fff; }
+    .page{ padding:24px 8px; max-width:100%; }
+  }
+
+  @media (max-width:600px){
+    .page{ padding:36px 22px 60px; }
+    header{ flex-direction:column; align-items:flex-start; }
+    .contact{ text-align:left; }
+    .job-head{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div>
+      <h1>Dinh An Dai<span class="alias">endale</span></h1>
+      <div class="role-line">Senior Protocol Engineer — EVM, Consensus &amp; Cross-Chain Systems</div>
+    </div>
+    <div class="contact">
+      HCMC, Vietnam<br>
+      <a href="mailto:endadinh@gmail.com">endadinh@gmail.com</a><br>
+      +84 86 598 7807<br>
+      <a href="https://www.linkedin.com/in/endadinh/" target="_blank">linkedin.com/in/endadinh</a><br>
+      <a href="https://github.com/0xendale" target="_blank">github.com/0xendale</a><br>
+      <a href="https://github.com/endale98" target="_blank">github.com/endale98</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p style="font-size:14.5px; color:var(--ink); margin:0;">
+      Protocol engineer with 4+ years building and hardening blockchain infrastructure across EVM, Solana, and TON.
+      Currently leading core protocol work on the Viction chain (vic-geth migration, PoSV consensus), with shipped
+      production work spanning cross-chain bridges, liquid staking, DLMM AMMs, and on-chain gaming systems.
+    </p>
+  </section>
+
+  <section style="margin-bottom:36px;">
+    <div style="display:flex; flex-wrap:wrap; gap:0; border:1px solid var(--line); border-radius:6px; overflow:hidden;">
+      <div style="flex:1; min-width:150px; padding:16px 18px; border-right:1px solid var(--line);">
+        <div style="font-family:'SFMono-Regular',Consolas,Menlo,monospace; font-size:20px; font-weight:700; color:var(--accent);">$100M+ / $900M+</div>
+        <div style="font-size:11.5px; color:var(--muted); margin-top:3px;">Saros DLMM peak TVL / all-time volume</div>
+      </div>
+      <div style="flex:1; min-width:130px; padding:16px 18px; border-right:1px solid var(--line);">
+        <div style="font-family:'SFMono-Regular',Consolas,Menlo,monospace; font-size:20px; font-weight:700; color:var(--accent);">$4M+</div>
+        <div style="font-size:11.5px; color:var(--muted); margin-top:3px;">Raised across 10+ Starship launches</div>
+      </div>
+      <div style="flex:1; min-width:130px; padding:16px 18px; border-right:1px solid var(--line);">
+        <div style="font-family:'SFMono-Regular',Consolas,Menlo,monospace; font-size:20px; font-weight:700; color:var(--accent);">$2.6M+</div>
+        <div style="font-size:11.5px; color:var(--muted); margin-top:3px;">Combined NFT sales volume shipped</div>
+      </div>
+      <div style="flex:1; min-width:130px; padding:16px 18px;">
+        <div style="font-family:'SFMono-Regular',Consolas,Menlo,monospace; font-size:20px; font-weight:700; color:var(--accent);">2+</div>
+        <div style="font-size:11.5px; color:var(--muted); margin-top:3px;">Independent security audits passed</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-title">Senior Protocol Engineer</span> · <span class="job-company">Ninety Eight Company Limited (Coin98)</span>
+        </div>
+        <div class="job-date">Sep 2022 — Present</div>
+      </div>
+      <div class="job-links">
+        <a href="https://ne.xyz/" target="_blank">ne.xyz</a> ·
+        Protocol Engineer (Sep 2022 – Dec 2025) → Senior Protocol Engineer (Dec 2025 – Present) ·
+        Git used: <a href="https://github.com/BuildOnViction" target="_blank">BuildOnViction</a>, <a href="https://github.com/endale98" target="_blank">endale98</a>
+      </div>
+      <span class="achievement">🏆 Best Performance of the Year, 2024</span>
+      <ul class="bullets">
+        <li><b>Viction Chain Core</b> — researched and implemented technical upgrades to Viction Chain infrastructure to improve network stability and performance. <span style="color:var(--muted);">(<a href="https://github.com/BuildOnViction" target="_blank" style="color:var(--muted);">github.com/BuildOnViction</a> · <a href="https://viction.xyz/" target="_blank" style="color:var(--muted);">viction.xyz</a>)</span></li>
+        <li><b>Starship (Cross-Chain Launchpad)</b> — developed smart contracts for a cross-chain launchpad spanning EVM, Solana, and Aptos ecosystems; supported <span class="stat">10+</span> project launches raising over <span class="stat">$4M</span>, with its token collection generating <span class="stat">$2M+</span> in secondary sales volume. <span style="color:var(--muted);">(<a href="https://starship.network/" target="_blank" style="color:var(--muted);">starship.network</a> · <a href="https://github.com/cybring-xyz/audit-reports/blob/main/Starship-audit-report.pdf" target="_blank" style="color:var(--accent);">audit report ↗</a> · <a href="https://dagora.xyz/collection/viction/0x8C630bD3a6B58fD26F246E5EB74837fFCcE6C5bE" target="_blank" style="color:var(--muted);">marketplace ↗</a>)</span></li>
+        <li><b>Defusion (Viction)</b> — shipped liquid staking and derivative contracts to optimize capital efficiency within the Viction DeFi landscape. <span style="color:var(--muted);">(<a href="https://www.defusion.xyz/" target="_blank" style="color:var(--muted);">defusion.xyz</a>)</span></li>
+        <li><b>Eternals (Web3 Game)</b> — implemented on-chain item management and secure minting systems for high-scale gaming environments; NFT and PFP collections combined for over <span class="stat">$600K</span> in trading volume. <span style="color:var(--muted);">(<a href="https://www.eternals.game/" target="_blank" style="color:var(--muted);">eternals.game</a> · NFT: <a href="https://dagora.xyz/collection/viction/0xD4A3639794e85160eF2e953e28eeE73a84fD9279" target="_blank" style="color:var(--muted);">marketplace ↗</a>, PFP: <a href="https://dagora.xyz/collection/viction/0x74Bf46B97E841eCea8Dc248D6A860db2cE4b8F88" target="_blank" style="color:var(--muted);">marketplace ↗</a>)</span></li>
+        <li><b>TON Network (FunC)</b> — ported aggregator logic to FunC for SuperLink and Coin98 Vault, managing TON's asynchronous actor model.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-title">Protocol Engineer</span> · <span class="job-company">Saros Finance</span>
+        </div>
+        <div class="job-date">Sep 2024 — Sep 2025</div>
+      </div>
+      <div class="job-links">
+        <a href="https://saros.xyz/pools" target="_blank">saros.xyz</a> ·
+        <a href="https://github.com/saros-xyz" target="_blank">github.com/saros-xyz</a>
+      </div>
+      <ul class="bullets">
+        <li><b>Saros DLMM (Solana)</b> — contributed to core protocol upgrades and developed the Rust SDK to facilitate third-party integration. <span style="color:var(--muted);">(audited: <a href="https://github.com/cybring-xyz/audit-reports/blob/main/Saros-Liquidity-Book-audit-report.pdf" target="_blank" style="color:var(--accent);">core ↗</a>, <a href="https://github.com/cybring-xyz/audit-reports/blob/main/Saros-DLMM-Reward-final-audit-report.pdf" target="_blank" style="color:var(--accent);">rewards ↗</a>)</span></li>
+        <li>Protocol reached a peak TVL of <span class="stat">$100M+</span> and processed <span class="stat">$900M+</span> in all-time trading volume.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="job-title">Backend / Blockchain Developer</span> · <span class="job-company">Uniontek Training Technology JSC</span>
+        </div>
+        <div class="job-date">Nov 2021 — 2022</div>
+      </div>
+      <ul class="bullets">
+        <li><b>DApp Architecture</b> — designed and deployed end-to-end Web3 solutions for GameFi and NFT platforms, including custom marketplace and minting engines.</li>
+        <li><b>Smart Contract Engineering</b> — developed secure Solidity contracts for tokens and staking protocols, and optimized distribution systems.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-pill">Rust</span>
+      <span class="skill-pill">Solidity</span>
+      <span class="skill-pill">Go</span>
+      <span class="skill-pill">TypeScript</span>
+      <span class="skill-pill">FunC (TON)</span>
+      <span class="skill-pill">Move</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Research &amp; Side Projects</h2>
+    <ul class="bullets" style="padding-left:0; list-style:none;">
+      <li style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:baseline;">
+        <span><b>Stealth Payments on Solana</b> <span class="achievement" style="margin:0 6px; padding:1px 7px; font-size:10.5px; vertical-align:middle;">research / untested</span> <span style="color:var(--muted); font-weight:400;">— exploring privacy-preserving payment primitives.</span></span>
+        <a href="https://github.com/umbra-research/umbra-rs" target="_blank" style="color:var(--muted); font-family:'SFMono-Regular',Consolas,Menlo,monospace; font-size:12.5px; white-space:nowrap;">umbra-research/umbra-rs ↗</a>
+      </li>
+      <li style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:baseline;">
+        <span><b>Modular ZK Toolkit for the Agentic RWA Economy</b> <span class="achievement" style="margin:0 6px; padding:1px 7px; font-size:10.5px; vertical-align:middle;">research / untested</span> <span style="color:var(--muted); font-weight:400;">— zero-knowledge toolkit for on-chain real-world-asset use cases.</span></span>
+        <a href="https://github.com/umbra-research/umbra-zk" target="_blank" style="color:var(--muted); font-family:'SFMono-Regular',Consolas,Menlo,monospace; font-size:12.5px; white-space:nowrap;">umbra-research/umbra-zk ↗</a>
+      </li>
+      <li style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:baseline;">
+        <span><b>Elliptic Curve VRF</b> <span style="color:var(--muted); font-weight:400;">— working implementation of a verifiable random function for on-chain randomness.</span></span>
+        <a href="https://github.com/0xendale/ecvrf" target="_blank" style="color:var(--muted); font-family:'SFMono-Regular',Consolas,Menlo,monospace; font-size:12.5px; white-space:nowrap;">0xendale/ecvrf ↗</a>
+      </li>
+      <li style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:baseline;">
+        <span><b>Godz Eyes Bot</b> <span style="color:var(--muted); font-weight:400;">— live Telegram bot monitoring on-chain whale trades on Viction.</span></span>
+        <a href="https://github.com/Godz-Eyes/godz-eyes-bot" target="_blank" style="color:var(--muted); font-family:'SFMono-Regular',Consolas,Menlo,monospace; font-size:12.5px; white-space:nowrap;">Godz-Eyes/godz-eyes-bot ↗</a>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    Dinh An Dai · Last updated 2026
+  </footer>
+
+</div>
+</body>
+</html>
